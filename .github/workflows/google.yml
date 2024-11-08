@@ -46,7 +46,7 @@ env:
   DEPLOYMENT_NAME: 'Game 101' # TODO: update to your deployment name
   REPOSITORY: 'samples' # TODO: update to your Artifact Registry docker repository name
   IMAGE: 'static-site'
-  WORKLOAD_IDENTITY_PROVIDER: 'projects/alien-rainfall-171187-n0/logs/cloudaudit.googleapis.com%2Factivity' # TODO: update to your workload identity provider
+  WORKLOAD_IDENTITY_PROVIDER: 'projects/alien-rainfall-171187-n0/logs/cloudaudit.googleapis.com%2Fdata_access' # TODO: update to your workload identity provider
 
 jobs:
   setup-build-publish-deploy:
