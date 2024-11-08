@@ -1,0 +1,23 @@
+name: Deploy to Kubernetes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure kubectl
+        uses: azure/kubernetesservice-connect@v1
+        with:
+          # Replace with your cluster details
+          cluster_name: dungeons-fraggels-cluster0
+          namespace: europe-west10
+      - name: Deploy to Kubernetes
+        run: |
+          kubectl apply -f deployment.yaml
+          kubectl apply -f service.yaml
+          # Apply other YAML files as needed
