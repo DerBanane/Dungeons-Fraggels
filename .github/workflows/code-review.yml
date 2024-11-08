@@ -1,6 +1,5 @@
 name: Gemini AI Code Reviewer
-                
-            
+
 on:
   issue_comment:
     types: [created]
@@ -14,16 +13,13 @@ jobs:
       github.event.issue.pull_request &&
       contains(github.event.comment.body, '/gemini-review')
     steps:
-      - name: PR Info
-        run: |
-          echo "Comment: ${{ github.event.comment.body }}"
-          echo "Issue Number: ${{ github.event.issue.number }}"
-          echo "Repository: ${{ github.repository }}"
-
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
+      - name: Set up GitHub CLI
+        uses: actions/setup-github-cli@v3
 
       - name: Get PR Details
         id: pr
