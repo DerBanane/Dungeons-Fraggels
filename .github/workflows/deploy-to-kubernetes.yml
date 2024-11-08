@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Configure kubectl
-        uses: azure/kubernetesservice-connect@v1
+        uses: azure/kubernetesservice-connect@v2
         with:
           # Replace with your cluster details
           cluster_name: dungeons-fraggels-cluster0
