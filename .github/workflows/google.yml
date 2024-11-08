@@ -40,18 +40,18 @@ on:
 
 env:
   PROJECT_ID: 'alien-rainfall-171187-n0' # TODO: update to your Google Cloud project ID
-  GAR_LOCATION: 'eu-central1' # TODO: update to your region
-  GKE_CLUSTER: 'cluster-0' # TODO: update to your cluster name
-  GKE_ZONE: 'eu-central1-c' # TODO: update to your cluster zone
+  GAR_LOCATION: 'europe-west10' # TODO: update to your region
+  GKE_CLUSTER: 'dungeons-fraggels-cluster' # TODO: update to your cluster name
+  GKE_ZONE: 'europe-central2' # TODO: update to your cluster zone
   DEPLOYMENT_NAME: 'Game 101' # TODO: update to your deployment name
-  REPOSITORY: 'samples' # TODO: update to your Artifact Registry docker repository name
+  REPOSITORY: 'dungeons-fraggels' # TODO: update to your Artifact Registry docker repository name
   IMAGE: 'static-site'
   WORKLOAD_IDENTITY_PROVIDER: 'projects/alien-rainfall-171187-n0/logs/cloudaudit.googleapis.com%2Fdata_access' # TODO: update to your workload identity provider
 
 jobs:
   setup-build-publish-deploy:
     name: 'Setup, Build, Publish, and Deploy'
-    runs-on: 'ubuntu-latest'
+    runs-on: 'windows-latest'
     environment: 'production'
 
     permissions:
