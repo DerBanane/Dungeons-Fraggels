@@ -10,8 +10,7 @@ on:
 permissions:  
   contents: read  
   id-token: write  
-  write-all: write  
-
+  
 # Allows Gemini code review job if triggered by comment
 env:  
   PROJECT_ID: 'alien-rainfall-171187-n0'  # Google Cloud project ID  
