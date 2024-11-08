@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: 'Checkout Code'
-        uses: actions/checkout@v4
+        uses: ./actions/my-checkout-action@v1
         with:
           fetch-depth: 0  # Full repository history
 
@@ -79,7 +79,7 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v1
+        uses: ./actions/my-checkout-action@v1
         with:
           fetch-depth: 0
 
