@@ -72,13 +72,3 @@ jobs:
           kustomize build . | kubectl apply -f -
           kubectl rollout status deployment/${{ env.DEPLOYMENT_NAME }}
           kubectl get services -o wide
-```
-
-### Key Changes:
-- Removed unnecessary quotes around the branch name.
-- Corrected environment variable references to use `${{ env.VARIABLE_NAME }}` syntax.
-- Fixed the `kustomize edit set image` command to use the correct references to environment variables.
-- Ensured proper formatting of the Docker tag and Kustomize command.
-- Updated comments for clarity. 
-
-This should now be a functional GitHub Actions workflow for building and deploying your application to GKE.
